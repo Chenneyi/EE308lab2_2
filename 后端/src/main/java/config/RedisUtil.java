@@ -118,14 +118,14 @@ public final class RedisUtil {
 
     public long incr(String key, long delta) {
         if (delta < 0) {
-            throw new RuntimeException("递增因子必须大于0");
+            throw new RuntimeException("The increment factor must be greater than 0");
         }
         return redisTemplate.opsForValue().increment(key, delta);
     }
 
     public long decr(String key, long delta) {
         if (delta < 0) {
-            throw new RuntimeException("递减因子必须大于0");
+            throw new RuntimeException("The decreasing factor must be greater than 0");
         }
         return redisTemplate.opsForValue().increment(key, -delta);
     }
@@ -239,11 +239,7 @@ public final class RedisUtil {
             return 0;
         }
     }
-    /**
-     * 获取set缓存的长度
-     * @param key 键
-     * @return
-     */
+
     public long sGetSetSize(String key) {
         try {
             return redisTemplate.opsForSet().size(key);
