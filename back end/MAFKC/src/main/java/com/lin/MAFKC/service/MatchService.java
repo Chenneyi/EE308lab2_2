@@ -1,4 +1,4 @@
-package com.lin.xiaoyaoshai.service;
+package com.lin.MAFKC.service;
 
 import com.lin.xiaoyaoshai.vo.DisRelationInfoVO;
 import com.lin.xiaoyaoshai.vo.MatchInfoVO;
@@ -14,18 +14,13 @@ import java.util.Map;
 public class MatchService {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    //记录用户id数组
     ArrayList<String> mailList = new ArrayList<>();
 
     Map<String,String> rivalInfo = new HashMap<>();
 
     Map<String,String> oderInfo = new HashMap<>();
 
-    /**
-     * 匹配对手
-     * @param mail
-     * @return
-     */
+ 
     public MatchInfoVO matchRival(String mail) {
         System.out.println(mailList);
         //logger.info(mail);
@@ -65,11 +60,7 @@ public class MatchService {
         return VO;
     }
 
-    /**
-     * 解除关系
-     * @param VO
-     * @return
-     */
+ 
     public int disRelation(DisRelationInfoVO VO) {
         try{
             String userId1 = VO.getUserId1();
