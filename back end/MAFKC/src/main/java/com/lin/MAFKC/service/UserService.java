@@ -28,40 +28,32 @@ public class UserService {
 
     @Autowired
     RedisUtil redisUtil;
-    /**
-     * 登陆
-     * @param loginVO
-     * @return
-     */
+
     public int login(LoginVO loginVO){
         User getUser;
         try {
             getUser = userMapper.selectById(loginVO.getId());
             logger.info(getUser.getId());
             if (getUser.getId().equals(loginVO.getId())) {
-                logger.info("存在此邮箱");
+                logger.info("The email is exist");
                 if (getUser.getPassword().equals(loginVO.getPassword())) {
-                    logger.info("密码正确");
+                    logger.info("The passwords are correct");
                     return 1;
                 }
                 else {
-                    logger.info("密码错误");
+                    logger.info("The passwords are wrong");
                     return 0;
                 }
             }
         }
         catch (Exception e){
-            logger.info("不存在此邮箱");
+            logger.info("The email isn't exist");
             return 0;
         }
         return 0;
     }
 
-    /**
-     * 发送验证码
-     * @param userMail
-     * @return
-     */
+
     public int sendCode(String userMail){
         try{
             SimpleMailMessage message = mailService.generateMailByExamId(userMail);
@@ -69,16 +61,12 @@ public class UserService {
             return 1;
         }
         catch (Exception e){
-            logger.info("发送失败");
+            logger.info("fail to send");
             return 0;
         }
     }
 
-    /**
-     * 注册
-     * @param VO
-     * @return
-     */
+    
     public int register(RegisterVO VO) {
         String mail = VO.getId();
         String password = VO.getPassword();
