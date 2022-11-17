@@ -1,7 +1,7 @@
 package com.lin.MAFKC.service;
 
-import com.lin.xiaoyaoshai.vo.DisRelationInfoVO;
-import com.lin.xiaoyaoshai.vo.MatchInfoVO;
+import com.lin.MAFKC.vo.DisRelationInfoVO;
+import com.lin.MAFKC.vo.MatchInfoVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
