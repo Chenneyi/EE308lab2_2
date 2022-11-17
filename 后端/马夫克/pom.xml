@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lin</groupId>
-    <artifactId>XiaoYaoShai</artifactId>
+    <artifactId>MAFKC</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>XiaoYaoShai</name>
-    <description>XiaoYaoShai</description>
+    <name>MAFKC</name>
+    <description>MAFKC</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
