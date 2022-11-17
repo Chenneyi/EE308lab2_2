@@ -1,4 +1,4 @@
-package com.lin.xiaoyaoshai.vo;
+package com.lin.MAFKC.vo;
 
 import lombok.Data;
 
@@ -7,6 +7,6 @@ import javax.validation.constraints.Email;
 @Data
 public class GetCodeVO {
 
-    @Email(message = "邮箱格式错误")
+    @Email(message = "Incorrect email format")
     private String id;
 }
