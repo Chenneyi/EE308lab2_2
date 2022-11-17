@@ -23,7 +23,7 @@ public class MatchService {
  
     public MatchInfoVO matchRival(String mail) {
         System.out.println(mailList);
-        //logger.info(mail);
+        
         MatchInfoVO VO = new MatchInfoVO();
 
 
@@ -51,8 +51,7 @@ public class MatchService {
                 oderInfo.put(mailList.get(1),"latter");
                 mailList.clear();
             }
-//        System.out.println(mailList.get(0));
-//        System.out.println(mailList.get(1));
+
             System.out.println(rivalInfo);
         }
 
