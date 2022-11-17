@@ -1,10 +1,10 @@
-package com.lin.xiaoyaoshai.service;
+package com.lin.MAFKC.service;
 
-import com.lin.xiaoyaoshai.config.RedisUtil;
-import com.lin.xiaoyaoshai.entity.User;
-import com.lin.xiaoyaoshai.mapper.UserMapper;
-import com.lin.xiaoyaoshai.vo.LoginVO;
-import com.lin.xiaoyaoshai.vo.RegisterVO;
+import com.lin.MAFKC.config.RedisUtil;
+import com.lin.MAFKC.entity.User;
+import com.lin.MAFKC.mapper.UserMapper;
+import com.lin.MAFKC.vo.LoginVO;
+import com.lin.MAFKC.vo.RegisterVO;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.slf4j.Logger;
