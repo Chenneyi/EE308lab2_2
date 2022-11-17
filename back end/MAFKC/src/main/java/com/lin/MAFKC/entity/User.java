@@ -1,4 +1,4 @@
-package com.lin.xiaoyaoshai.entity;
+package com.lin.MAFKC.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
