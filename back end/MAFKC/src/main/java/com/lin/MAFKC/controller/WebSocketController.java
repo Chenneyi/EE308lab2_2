@@ -1,6 +1,6 @@
-package com.lin.xiaoyaoshai.controller;
+package com.lin.MAFKC.controller;
 
-import com.lin.xiaoyaoshai.config.WebSocketServer;
+import com.lin.MAFKC.config.WebSocketServer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +14,7 @@ import java.io.IOException;
 public class WebSocketController {
     @GetMapping("index")
     public ResponseEntity<String> index(){
-        return ResponseEntity.ok("请求成功");
+        return ResponseEntity.ok("request successfully");
     }
 
     @GetMapping("page")
