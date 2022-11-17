@@ -1,8 +1,8 @@
-package com.lin.xiaoyaoshai;
+package com.lin.MAFKC;
 
-import com.lin.xiaoyaoshai.config.RedisUtil;
-import com.lin.xiaoyaoshai.entity.User;
-import com.lin.xiaoyaoshai.mapper.UserMapper;
+import com.lin.MAFKC.config.RedisUtil;
+import com.lin.MAFKC.entity.User;
+import com.lin.MAFKC.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +22,7 @@ class XiaoYaoShaiApplicationTests {
 
 //    @Test
 //    void testInsert(){
-//        int result = userMapper.insert(new User("228751565@qq.com","123456"));
+//        int result = userMapper.insert(new User("170883206@qq.com","123456"));
 //        System.out.println("result:" + result);
 //    }
 //    @Autowired(required = false)
@@ -30,8 +30,8 @@ class XiaoYaoShaiApplicationTests {
 //he's
 //    @Test
 //    void getName(){
-//        redisUtil.set("2287511565@qq.com","5654");
-//        redisUtil.expire("2287511565@qq.com",30);
+//        redisUtil.set("170883206@qq.com","5654");
+//        redisUtil.expire("170883206@qq.com",30);
 
 //        System.out.println(redisUtil.get("2287511565@qq.com"));
 //        System.out.println(redisUtil.getExpire("2287511565@qq.com"));
