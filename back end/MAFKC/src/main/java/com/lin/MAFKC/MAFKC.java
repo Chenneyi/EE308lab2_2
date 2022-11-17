@@ -5,11 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.lin.xiaoyaoshai.mapper")
-public class XiaoYaoShaiApplication {
+@MapperScan("com.lin.MAFKC.mapper")
+public class MAFK {
 
     public static void main(String[] args) {
-        SpringApplication.run(XiaoYaoShaiApplication.class, args);
+        SpringApplication.run(MAFKC.class, args);
     }
 
 }
