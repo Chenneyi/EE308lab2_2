@@ -1,4 +1,4 @@
-package com.lin.xiaoyaoshai;
+package com.lin.MAFKC;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
