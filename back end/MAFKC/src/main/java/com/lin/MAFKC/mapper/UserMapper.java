@@ -1,7 +1,7 @@
-package com.lin.xiaoyaoshai.mapper;
+package com.lin.MAFKC.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.lin.xiaoyaoshai.entity.User;
+import com.lin.MAFKC.entity.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
