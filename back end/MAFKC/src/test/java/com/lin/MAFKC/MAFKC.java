@@ -33,10 +33,10 @@ class XiaoYaoShaiApplicationTests {
 //        redisUtil.set("170883206@qq.com","5654");
 //        redisUtil.expire("170883206@qq.com",30);
 
-//        System.out.println(redisUtil.get("2287511565@qq.com"));
-//        System.out.println(redisUtil.getExpire("2287511565@qq.com"));
+//        System.out.println(redisUtil.get("170883206@qq.com"));
+//        System.out.println(redisUtil.getExpire("170883206@qq.com"));
 
-//            String sources = "0123456789"; // 加上一些字母，就可以生成pc站的验证码了
+//            String sources = "0123456789"; 
 //            Random rand = new Random();
 //            StringBuffer flag = new StringBuffer();
 //            for (int j = 0; j < 6; j++)
