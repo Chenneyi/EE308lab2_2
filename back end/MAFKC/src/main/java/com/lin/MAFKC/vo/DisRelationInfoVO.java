@@ -1,4 +1,4 @@
-package com.lin.xiaoyaoshai.vo;
+package com.lin.MAFKC.vo;
 
 import lombok.Data;
 
