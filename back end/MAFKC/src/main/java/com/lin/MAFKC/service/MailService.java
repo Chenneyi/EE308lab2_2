@@ -1,6 +1,6 @@
-package com.lin.xiaoyaoshai.service;
+package com.lin.MAFKC.service;
 
-import com.lin.xiaoyaoshai.config.RedisUtil;
+import com.lin.MAFKC.config.RedisUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,17 +25,10 @@ public class MailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    /**
-     * 生成要发送的邮件
-     *
-     * @param userMail
-     * @return
-     */
 
     public SimpleMailMessage generateMailByExamId(String userMail) {
-        //获取信息
-        //生成验证码
-        String sources = "0123456789"; // 加上一些字母，就可以生成pc站的验证码了
+     
+        String sources = "0123456789"; 
         Random rand = new Random();
         StringBuffer flag = new StringBuffer();
         for (int j = 0; j < 6; j++)
@@ -44,26 +37,20 @@ public class MailService {
         }
         String code = flag.toString();
 
-
-        //邮件设置
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setSubject("【逍遥骰】");
-        message.setText("尊敬的用户，您的验证码为" + code +",本验证码5分钟内有效，感谢您使用。");
+        message.setSubject("[MAFKC]");
+        message.setText("Dear user, your verification code is" + code +",Dear users, your verification code for the verification code within 5 minutes, thank you for using.");
         message.setTo(userMail);
         message.setFrom(mailFrom);
 
-        //将邮箱内容存入缓存并设置过期时间
+        
         redisUtil.set(userMail,code);
         redisUtil.expire(userMail,300);
         System.out.println(redisUtil.getExpire(userMail));
         return message;
     }
 
-    /**
-     * 发送邮件
-     *
-     * @param message
-     */
+
     public void sendOut(SimpleMailMessage message) {
         System.out.println(message);
         mailSender.send(message);
