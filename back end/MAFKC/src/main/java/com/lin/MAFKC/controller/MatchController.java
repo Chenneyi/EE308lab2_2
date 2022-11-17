@@ -1,10 +1,10 @@
-package com.lin.xiaoyaoshai.controller;
+package com.lin.MAFKC.controller;
 
-import com.lin.xiaoyaoshai.config.CodeMsg;
-import com.lin.xiaoyaoshai.config.Result;
-import com.lin.xiaoyaoshai.service.MatchService;
-import com.lin.xiaoyaoshai.vo.DisRelationInfoVO;
-import com.lin.xiaoyaoshai.vo.MatchInfoVO;
+import com.lin.MAFKC.config.CodeMsg;
+import com.lin.MAFKC.config.Result;
+import com.lin.MAFKC.service.MatchService;
+import com.lin.MAFKC.vo.DisRelationInfoVO;
+import com.lin.MAFKC.vo.MatchInfoVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +17,7 @@ public class MatchController {
     @Autowired
     MatchService matchService;
 
-    /**
-     * 匹配对手
-     * @param mail
-     * @return
-     */
+    
     @GetMapping("/matchRival/{mail}")
     public Result<MatchInfoVO> matchRival(@PathVariable String mail) {
         logger.info(mail);
@@ -38,16 +34,12 @@ public class MatchController {
         return Result.success(matchService.matchRival(mail));
     }
 
-    /**
-     * 解除关系
-     * @param VO
-     * @return
-     */
+ 
     @PostMapping("disRelation")
     public Result<String> disRelation(@RequestBody DisRelationInfoVO VO) {
         int result = matchService.disRelation(VO);
         if(result == 1){
-            return Result.success("成功解除关系");
+            return Result.success("Successful dissolution of relationship");
         }
         else
             return Result.error(CodeMsg.DIS_ERROR);
